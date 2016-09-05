@@ -24,7 +24,12 @@ module.exports = NodeHelper.create({
 			params.push(model.file);
 		}, this);
 
-		console.log(params);
+		// var runCommand = spawn(params.join(" "));
+		var runCommand = spawn('python', params, { detached: false });
+
+		runCommand.stdout.on('data', (data) => {
+			console.log(`stdout: ${data}`);
+		});
 
 		self.sendSocketNotification("sentback", params);
 
