@@ -18,6 +18,7 @@ DETECT_DING = os.path.join(TOP_DIR, "resources/ding.wav")
 DETECT_DONG = os.path.join(TOP_DIR, "resources/dong.wav")
 DETECT_HOOKED = os.path.join(TOP_DIR, "resources/hooked.wav")
 
+
 class RingBuffer(object):
     """Ring buffer to hold audio from PortAudio"""
     def __init__(self, size = 4096):
