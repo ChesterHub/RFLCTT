@@ -16,6 +16,10 @@ var config = {
 			module: 'alert',
 		},
 		{
+			module: 'helloworld',
+			position: 'bottom_bar'
+		},
+		{
 			module: 'clock',
 			position: 'top_left'
 		},

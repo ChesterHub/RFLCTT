@@ -7,12 +7,27 @@
  * MIT Licensed.
  */
 
-Module.register("helloworld",{
-
+ Module.register("helloworld",{
 	// Default module config.
 	defaults: {
-		text: "Hello World!"
+		text: "Bears are cool",
+		models: [
+					{file: "snowboy/resources/snowboy.umdl"},
+					{file: "snowboy/smartmirror.pmdl"}
+		]
 	},
+
+	start: function() {
+		console.log("----------main file sent socket---------")
+		this.sendSocketNotification("snowboy", this.config);
+	},
+
+	socketNotificationReceived: function(notification, payload){
+		if (notification === "sentback"){
+			console.log("SUCCESS");
+		}
+	},
+	
 
 	// Override dom generator.
 	getDom: function() {
