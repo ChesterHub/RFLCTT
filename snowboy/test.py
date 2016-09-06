@@ -19,7 +19,7 @@ def interrupt_callback():
     return interrupted
 
 def intro():
-	snowboydecoder.play_audio_file(snowboydecoder.DETECT_ALEXA)
+	snowboydecoder.play_audio_file(snowboydecoder.DETECT_PANDA)
 
 if len(sys.argv) == 1:
     print("Error: need to specify model name")

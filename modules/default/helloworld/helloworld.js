@@ -10,10 +10,10 @@
  Module.register("helloworld",{
 	// Default module config.
 	defaults: {
-		text: "Bears are cool",
+		text: "Chester's Profile",
 		models: [
 					// {file: "./snowboy/resources/snowboy.umdl"},
-					{file: "./snowboy/Alexa.pmdl"}
+					{file: "./snowboy/PandaPandaPandaPanda.pmdl"}
 		]
 	},
 
