@@ -12,8 +12,8 @@
 	defaults: {
 		text: "Bears are cool",
 		models: [
-					{file: "./snowboy/resources/snowboy.umdl"},
-					{file: "./snowboy/smartmirror.pmdl"}
+					// {file: "./snowboy/resources/snowboy.umdl"},
+					{file: "./snowboy/Alexa.pmdl"}
 		]
 	},
 
@@ -24,7 +24,7 @@
 
 	socketNotificationReceived: function(notification, payload){
 		if (notification === "sentback"){
-			console.log("SUCCESS");
+			console.log(payload);
 		}
 	},
 	

@@ -18,7 +18,7 @@ module.exports = NodeHelper.create({
 		var models = config.models;
 		var self = this;
 
-		var params = ['./snowboy/mirror.py'];
+		var params = ['./snowboy/test.py'];
 
 		models.forEach(function(model) {
 			params.push(model.file);
@@ -26,12 +26,12 @@ module.exports = NodeHelper.create({
 
 		// var runCommand = spawn(params.join(" "));
 		var runCommand = spawn('python', params, { detached: false });
-
+		var youDidIt = "YOU FUCKING DID IT"
 		runCommand.stdout.on('data', (data) => {
 			console.log(`stdout: ${data}`);
 		});
 
-		self.sendSocketNotification("sentback", params);
+		self.sendSocketNotification("sentback", youDidIt);
 
 
 
