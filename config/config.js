@@ -76,7 +76,26 @@ var config = {
 		},
 		{
 			module: "custom_modules/login"
-		}
+		},
+		{
+			module: 'custom_modules/face_recognition',
+			position: 'upper_third'
+			
+  	}
+		//{
+		//	module: 'newsfeed',
+		//	position: 'bottom_bar',
+		//	config: {
+		//		feeds: [
+		//			{
+		//				title: "New York Times",
+		//				url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+		//			}
+		//		],
+		//		showSourceTitle: true,
+		//		showPublishDate: true
+		//	}
+		//},
 	]
 
 };

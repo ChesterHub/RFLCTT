@@ -12,3 +12,7 @@
  body {
  	
  }
+
+#canvas {
+	visibility: hidden; 
+}
