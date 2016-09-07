@@ -33,7 +33,7 @@ models = sys.argv[1:]
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-sensitivity = [0.4]*len(models)
+sensitivity = [0.6]*len(models)
 
 detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
 callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_HOOKED),

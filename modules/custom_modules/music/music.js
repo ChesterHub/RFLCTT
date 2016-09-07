@@ -7,10 +7,10 @@
  * MIT Licensed.
  */
 
- Module.register("helloworld",{
+ Module.register("music",{
 	// Default module config.
 	defaults: {
-		text: "Hello from RFLCT",
+		text: "MusicModule",
 		models: [
 					{
 						file: "./snowboy/pmdl/Log_me_out.pmdl",
