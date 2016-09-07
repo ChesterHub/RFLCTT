@@ -1,4 +1,4 @@
- Module.register("face_recognition",{
+git s Module.register("face_recognition",{
 
 	// Default module config.
 	defaults: {
