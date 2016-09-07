@@ -21,7 +21,8 @@ var config = {
 		},
 		{
 			module: 'clock',
-			position: 'top_left'
+			position: 'top_left',
+			classes: 'Sean'
 		},
 		{
 			module: 'calendar',
@@ -55,7 +56,7 @@ var config = {
 			header: 'Weather Forecast',
 			config: {
 	            location: 'New York',
-				locationID: '5128581',  //ID from http://www.openweathermap.org
+							locationID: '5128581',  //ID from http://www.openweathermap.org
 	            appid: 'YOUR_OPENWEATHER_API_KEY'
 			}
 		},
@@ -73,6 +74,9 @@ var config = {
 				showPublishDate: true
 			}
 		},
+		{
+			module: "custom_modules/login"
+		}
 	]
 
 };
