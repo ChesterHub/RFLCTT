@@ -18,24 +18,30 @@ def interrupt_callback():
     global interrupted
     return interrupted
 
-def intro():
-	snowboydecoder.play_audio_file(snowboydecoder.DETECT_PANDA)
+def play_song():
+    snowboydecoder.play_audio_file(snowboydecoder.DETECT_PANDA)
+    played = True
+    return played
 
-if len(sys.argv) == 1:
-    print("Error: need to specify model name")
-    print("Usage: python demo.py your.model")
-    sys.exit(-1)
+# if len(sys.argv) == 1:
+#     print("Error: need to specify model name")
+#     print("Usage: python demo.py your.model")
+#     sys.exit(-1)
 
-model = sys.argv[1]
+models = sys.argv[1:]
 
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-detector = snowboydecoder.HotwordDetector(model, sensitivity=0.5)
-print('Listening... Press Ctrl+C to exit')
+sensitivity = [0.4]*len(models)
+
+detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
+callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_HOOKED),
+             play_song]
+print('Listening for PANDA PANDA PANDA PANDA... Press Ctrl+C to exit')
 
 # main loop
-detector.start(detected_callback=intro,
+detector.start(detected_callback=callbacks,
                interrupt_check=interrupt_callback,
                sleep_time=0.03)
 

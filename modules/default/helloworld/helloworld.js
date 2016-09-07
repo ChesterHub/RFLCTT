@@ -12,8 +12,14 @@
 	defaults: {
 		text: "Chester's Profile",
 		models: [
-					// {file: "./snowboy/resources/snowboy.umdl"},
-					{file: "./snowboy/PandaPandaPandaPanda.pmdl"}
+					{
+						file: "./snowboy/pmdl/Log_me_out.pmdl",
+						message: "You DID IT"
+					},
+					{
+						file: "./snowboy/pmdl/PandaPandaPandaPanda.pmdl",
+						message: "You DID IT"
+					}
 		]
 	},
 
@@ -23,11 +29,11 @@
 	},
 
 	socketNotificationReceived: function(notification, payload){
-		if (notification === "sentback"){
+		if (notification === "KEYWORD_SPOTTED"){
 			console.log(payload);
+			this.sendNotification(payload.message, {type: "notification"});
 		}
 	},
-	
 
 	// Override dom generator.
 	getDom: function() {

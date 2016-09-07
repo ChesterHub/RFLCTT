@@ -28,7 +28,7 @@ def second():
             p1 = Process(target = start_node)
             p1.start()
             mirror_active = True
-            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_HOOKED))
+            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
             p2.start()
         else:
             print("Magic Mirror already active.")
@@ -46,11 +46,12 @@ models = sys.argv[1:]
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-sensitivity = [0.5]*len(models)
+sensitivity = [0.35]*len(models)
+
 detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
 callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_DING),
              second]
-print('Listening... Press Ctrl+C to exit')
+print('Listening for REFLECT... Press Ctrl+C to exit')
 
 # main loop
 # make sure you have the same numbers of callbacks and models
