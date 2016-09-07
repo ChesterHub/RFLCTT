@@ -37,8 +37,8 @@ var config = {
 			}
 		},
 		{
-			module: 'compliments',
-			position: 'lower_third'
+			module: 'custom_modules/quoteoftheday',
+			position: 'bottom_left'
 		},
 		{
 			module: 'currentweather',
