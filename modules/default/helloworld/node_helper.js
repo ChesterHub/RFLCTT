@@ -26,14 +26,27 @@ module.exports = NodeHelper.create({
 
 		// var runCommand = spawn(params.join(" "));
 		var runCommand = spawn('python', params, { detached: false });
-		var youDidIt = "YOU FUCKING DID IT"
+
+		// self.sendSocketNotification("sentback", youDidIt);
+		runCommand.stderr.on('data', function (data) {
+			var message = data.toString();
+			console.log("Seeing if voice command detected...");
+			if (message.startsWith('INFO')) {
+				console.log("Voice Command Detected");
+				var items = message.split(':');
+				var index = parseInt(items[2].split(' ')[1]);
+				var model = models[index - 1];
+				self.sendSocketNotification("KEYWORD_SPOTTED", model);
+
+			} else {
+				console.error(message);
+			}
+		})
+
+
 		runCommand.stdout.on('data', (data) => {
 			console.log(`stdout: ${data}`);
 		});
-
-		self.sendSocketNotification("sentback", youDidIt);
-
-
 
 	}
 })

@@ -18,7 +18,7 @@ DETECT_DING = os.path.join(TOP_DIR, "resources/ding.wav")
 DETECT_DONG = os.path.join(TOP_DIR, "resources/dong.wav")
 DETECT_HOOKED = os.path.join(TOP_DIR, "resources/hooked.wav")
 DETECT_ALEXA = os.path.join(TOP_DIR, "resources/AlexaIntro.wav")
-
+DETECT_PANDA = os.path.join(TOP_DIR, "resources/panda.wav")
 
 class RingBuffer(object):
     """Ring buffer to hold audio from PortAudio"""
