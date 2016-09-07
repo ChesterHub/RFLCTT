@@ -13,7 +13,8 @@ module.exports = NodeHelper.create({
 
 	// Subclass socketNotificationReceived received.
 	socketNotificationReceived: function(notification, payload) {
-		if (notification === "FUCK") {
+		if (notification === "Look at me") {
+			console.log("INSIDE LOOK AT ME SOCKET NOTIFICATION RECIEVED")
 		this.sendSocketNotification("SHIT", {name: "Sean"});
 		}
 	}

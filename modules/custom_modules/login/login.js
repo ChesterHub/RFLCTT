@@ -1,15 +1,16 @@
 Module.register("login", {
 
 	start: function() {
-		Log.log("FUCK FUCK MOHTERFUCKER " + this.name);
-		this.sendSocketNotification("FUCK", {});
+		Log.log("Starting module: " + this.name);
+		// this.sendSocketNotification("FUCK", {});
 		// current user
-		this.current_user = null;
+		// this.current_user = null;
 
 	},
 
 	socketNotificationReceived: function(notification, payload) {
 		if (notification === "SHIT") {
+			console.log("INSIDE THE LOGIN FUNCTION")
 			console.log("PAYLOAD EQUALS ", payload.name)
 			this.login_user(payload.name)
 		}
