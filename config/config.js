@@ -16,7 +16,7 @@ var config = {
 			module: 'alert',
 		},
 		{
-			module: 'helloworld',
+			module: 'custom_modules/music',
 			position: 'bottom_bar'
 		},
 		{
