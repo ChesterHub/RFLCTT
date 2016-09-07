@@ -18,7 +18,7 @@ module.exports = NodeHelper.create({
 		var models = config.models;
 		var self = this;
 
-		var params = ['./snowboy/test.py'];
+		var params = ['./snowboy/music.py'];
 
 		models.forEach(function(model) {
 			params.push(model.file);
