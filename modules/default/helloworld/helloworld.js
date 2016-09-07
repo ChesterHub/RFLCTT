@@ -2,37 +2,16 @@
 
 /* Magic Mirror
  * Module: HelloWorld
- * 
+ *
  * By Michael Teeuw http://michaelteeuw.nl
  * MIT Licensed.
  */
 
- Module.register("helloworld",{
+Module.register("helloworld",{
+
 	// Default module config.
 	defaults: {
-		text: "Hello from RFLCT",
-		models: [
-					{
-						file: "./snowboy/pmdl/Log_me_out.pmdl",
-						message: "You DID IT"
-					},
-					{
-						file: "./snowboy/pmdl/PandaPandaPandaPanda.pmdl",
-						message: "You DID IT"
-					}
-		]
-	},
-
-	start: function() {
-		console.log("----------main file sent socket---------")
-		this.sendSocketNotification("snowboy", this.config);
-	},
-
-	socketNotificationReceived: function(notification, payload){
-		if (notification === "KEYWORD_SPOTTED"){
-			console.log(payload);
-			this.sendNotification(payload.message, {type: "notification"});
-		}
+		text: "Hello World!"
 	},
 
 	// Override dom generator.
