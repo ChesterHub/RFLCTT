@@ -29,6 +29,7 @@ var config = {
 			module: 'calendar',
 			header: 'US Holidays',
 			position: 'top_left',
+			classes: 'Sean',
 			config: {
 				calendars: [
 					{
@@ -54,6 +55,7 @@ var config = {
 		},
 		{
 			module: 'weatherforecast',
+			classes: 'Sean',
 			position: 'top_right',
 			header: 'Weather Forecast',
 			config: {
