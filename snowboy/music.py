@@ -18,10 +18,19 @@ def interrupt_callback():
     global interrupted
     return interrupted
 
-def play_song():
+# ALL METHODS FOR CALLBACKS----------------------------------
+
+def look_at_me():
+    snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG)
+
+def toothbrush():
+    snowboydecoder.play_audio_file(snowboydecoder.DETECT_HOOKED)
+
+def play_panda():
     snowboydecoder.play_audio_file(snowboydecoder.DETECT_PANDA)
-    played = True
-    return played
+
+# -----------------------------------------------------------
+
 
 # if len(sys.argv) == 1:
 #     print("Error: need to specify model name")
@@ -33,11 +42,10 @@ models = sys.argv[1:]
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-sensitivity = [0.5]*len(models)
+sensitivity = [0.45]*len(models)
 
 detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
-callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG),
-             play_song]
+callbacks = [look_at_me, toothbrush, play_panda]
 print('Listening for PANDA PANDA PANDA PANDA... Press Ctrl+C to exit')
 
 # main loop
