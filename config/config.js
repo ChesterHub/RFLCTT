@@ -21,6 +21,10 @@ var config = {
 			classes: 'Kevin Chester Sean Ken'
 		},
 		{
+			module: 'custom_modules/alexa',
+			position: 'bottom'
+		},
+		{
 			module: 'clock',
 			position: 'top_left',
 			classes: 'Kevin Sean Chester'
