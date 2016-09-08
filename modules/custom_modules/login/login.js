@@ -12,6 +12,7 @@ Module.register("login", {
 			console.log("INSIDE THE LOGIN FUNCTION")
 			console.log("PAYLOAD EQUALS ", payload.name)
 			this.login_user(payload.name)
+			this.getDom(payload.name)
 		}
 	},
 
@@ -22,6 +23,14 @@ Module.register("login", {
 				Log.log(module.name + ' is hidden.');
 			});
 		});
+	},
+
+	getDom: function(name) {
+		console.log("Inside get dom", name)
+		var wrapper = document.createElement("div");
+		wrapper.innerHTML = "Welcome ", name
+
+		return wrapper;
 	}
 
 })	

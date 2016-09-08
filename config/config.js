@@ -75,7 +75,9 @@ var config = {
 			}
 		},
 		{
-			module: "custom_modules/login"
+			module: "custom_modules/login",
+			position: "lower_third",
+			classes: "Sean"
 		},
 		{
 			module: 'custom_modules/face_recognition',
