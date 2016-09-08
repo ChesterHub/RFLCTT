@@ -37,6 +37,7 @@ module.exports = NodeHelper.create({
 		}).then(
 			function(success) {
 				console.log("*********************************************************");
+				console.log(success)
 				var name = success.entity.split("subject")[1].split(',')[0].slice(3, -1)
 				console.log(name);
 				self.sendSocketNotification("SHIT", {name: name})

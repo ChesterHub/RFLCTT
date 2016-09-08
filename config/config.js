@@ -80,9 +80,7 @@ var config = {
 			classes: "Sean"
 		},
 		{
-			module: 'custom_modules/face_recognition',
-			position: 'upper_third'
-			
+			module: 'custom_modules/face_recognition'
   	}
 		//{
 		//	module: 'newsfeed',

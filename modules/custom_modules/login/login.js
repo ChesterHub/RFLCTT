@@ -2,9 +2,6 @@ Module.register("login", {
 
 	start: function() {
 		Log.log("Starting module: " + this.name);
-		// this.sendSocketNotification("FUCK", {});
-		// current user
-		// this.current_user = null;
 	},
 
 	notificationReceived: function(notification, payload, sender) {
@@ -12,7 +9,6 @@ Module.register("login", {
 			console.log("INSIDE THE LOGIN FUNCTION")
 			console.log("PAYLOAD EQUALS ", payload.name)
 			this.login_user(payload.name)
-			this.getDom(payload.name)
 		}
 	},
 
@@ -28,7 +24,7 @@ Module.register("login", {
 	getDom: function(name) {
 		console.log("Inside get dom", name)
 		var wrapper = document.createElement("div");
-		wrapper.innerHTML = "Welcome ", name
+		wrapper.innerHTML = "Welcome " 
 
 		return wrapper;
 	}
