@@ -21,20 +21,37 @@ def interrupt_callback():
 
 mirror_active = False
 
-def second():
+def start_mirror():
     global mirror_active
     if __name__=='__main__':
         if mirror_active == False: 
             p1 = Process(target = start_node)
             p1.start()
             mirror_active = True
-            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_HOOKED))
+            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
             p2.start()
         else:
             print("Magic Mirror already active.")
 
 def start_node():
     os.system("npm start")
+
+def end_mirror():
+    global mirror_active
+   # if __name__=='__main__':
+   #     if mirror_active == True: 
+   #         p1 = Process(target = end_node)
+   #         p1.start()
+   #         mirror_active = False
+   #         p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
+   #         p2.start()
+   #     else:
+   #         print("Magic Mirror is not active.")
+
+# method that stops servers
+#def end_node():
+#    os.system("pkill -f electron")
+#    os.system("pkill -f music.py")
 
 if len(sys.argv) != 3:
     print("Error: need to specify 2 model names")
@@ -47,10 +64,11 @@ models = sys.argv[1:]
 signal.signal(signal.SIGINT, signal_handler)
 
 sensitivity = [0.5]*len(models)
+
 detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
-callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_DING),
-             second]
-print('Listening... Press Ctrl+C to exit')
+callbacks = [start_mirror,
+             end_mirror]
+print('Listening for REFLECT... Press Ctrl+C to exit')
 
 # main loop
 # make sure you have the same numbers of callbacks and models
