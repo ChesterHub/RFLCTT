@@ -13,15 +13,17 @@ var config = {
 
 	modules: [
 		{
-			module: 'alert',
+			module: 'alert'
 		},
 		{
 			module: 'custom_modules/music',
-			position: 'bottom_bar'
+			position: 'bottom_bar',
+			classes: 'Kevin Chester'
 		},
 		{
 			module: 'clock',
-			position: 'top_left'
+			position: 'top_left',
+			classes: 'Kevin Sean Chester'
 		},
 		{
 			module: 'calendar',
@@ -43,6 +45,7 @@ var config = {
 		{
 			module: 'currentweather',
 			position: 'top_right',
+			classes: 'Ken Sean Chester',
 			config: {
 				location: 'New York',
 				locationID: '',  //ID from http://www.openweathermap.org
@@ -55,29 +58,49 @@ var config = {
 			header: 'Weather Forecast',
 			config: {
 	            location: 'New York',
-				locationID: '5128581',  //ID from http://www.openweathermap.org
+							locationID: '5128581',  //ID from http://www.openweathermap.org
 	            appid: 'YOUR_OPENWEATHER_API_KEY'
 			}
 		},
 		{
-			module: 'custom_modules/face_recognition',
-			position: 'upper_third'
+			module: 'newsfeed',
+			position: 'bottom_bar',
+			classes: 'Ken',
+			config: {
+				feeds: [
+					{
+						title: "New York Times",
+						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+					}
+				],
+				showSourceTitle: true,
+				showPublishDate: true
+			}
+		},
+		{
+			module: "custom_modules/login",
+			position: "lower_third",
+			classes: "Sean"
+		},
+		{
+			module: 'custom_modules/face_recognition'
+  	},
+  	{
+  		module: 'custom_modules/bbcnews',
+  		position: 'bottom_bar',
+  		classes: 'Sean'
+  	},
+  	// {
+  	// 	module: 'custom_modules/quoteoftheday',
+  	// 	position: 'lower_third',
+  	// 	classes: 'Kevin Sean'
+  	// },
+  	{
+  		module: 'custom_modules/redditworldnews',
+  		position: 'bottom_bar',
+  		classes: 'Kevin Chester'
+  	}
 
-    	}
-		//{
-		//	module: 'newsfeed',
-		//	position: 'bottom_bar',
-		//	config: {
-		//		feeds: [
-		//			{
-		//				title: "New York Times",
-		//				url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-		//			}
-		//		],
-		//		showSourceTitle: true,
-		//		showPublishDate: true
-		//	}
-		//},
 	]
 
 };

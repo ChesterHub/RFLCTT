@@ -16,6 +16,7 @@ module.exports = NodeHelper.create({
 	},
 
 	kairosRecognize: function(image_data, gallery_id, callback, options) {
+		var self = this
 		console.log("INSIDE THE kairos RECOGNIZE FUNCTION");
 
 		var url = 'https://api.kairos.com/recognize';
@@ -36,7 +37,10 @@ module.exports = NodeHelper.create({
 		}).then(
 			function(success) {
 				console.log("*********************************************************");
-				console.log(success.entity.split("subject")[1].split(',')[0].slice(3, -1));
+				var name = success.entity.split("subject")[1].split(',')[0].slice(3, -1)
+				console.log(success)
+				console.log(name);
+				self.sendSocketNotification("SHIT", {name: name})
 				
 			},
 			function(error) {

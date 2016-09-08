@@ -12,9 +12,13 @@
 	defaults: {
 		text: "MusicModule",
 		models: [
+					// {
+					// 	file: "./snowboy/pmdl/Log_me_out.pmdl",
+					// 	message: "Log me out"
+					// },
 					{
-						file: "./snowboy/pmdl/Log_me_out.pmdl",
-						message: "You DID IT"
+						file: "./snowboy/pmdl/Look_at_me.pmdl",
+						message: "Look at me"
 					},
 					{
 						file: "./snowboy/pmdl/PandaPandaPandaPanda.pmdl",
@@ -26,12 +30,14 @@
 	start: function() {
 		console.log("----------main file sent socket---------")
 		this.sendSocketNotification("snowboy", this.config);
+
 	},
 
 	socketNotificationReceived: function(notification, payload){
 		if (notification === "KEYWORD_SPOTTED"){
-			console.log(payload);
-			this.sendNotification(payload.message, {type: "notification"});
+			console.log("PAYLOAD", payload);
+			console.log("PAYLOAD MESSAGE", payload.message)
+			this.sendNotification(payload.message);
 		}
 	},
 

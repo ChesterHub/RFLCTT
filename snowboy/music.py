@@ -36,7 +36,7 @@ signal.signal(signal.SIGINT, signal_handler)
 sensitivity = [0.5]*len(models)
 
 detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
-callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_HOOKED),
+callbacks = [lambda: snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG),
              play_song]
 print('Listening for PANDA PANDA PANDA PANDA... Press Ctrl+C to exit')
 
