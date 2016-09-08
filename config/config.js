@@ -61,6 +61,7 @@ var config = {
 			}
 		},
 		{
+<<<<<<< HEAD
 			module: 'newsfeed',
 			position: 'bottom_bar',
 			config: {
