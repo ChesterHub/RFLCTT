@@ -12,17 +12,17 @@
 	defaults: {
 		text: "MusicModule",
 		models: [
-					// {
-					// 	file: "./snowboy/pmdl/Log_me_out.pmdl",
-					// 	message: "Log me out"
-					// },
 					{
 						file: "./snowboy/pmdl/Look_at_me.pmdl",
 						message: "Look at me"
 					},
 					{
+						file: "./snowboy/pmdl/Toothbrush_Song.pmdl",
+						message: "Hooked on a feeling"
+					},
+					{
 						file: "./snowboy/pmdl/PandaPandaPandaPanda.pmdl",
-						message: "You DID IT"
+						message: "I got broads in Atlanta"
 					}
 		]
 	},

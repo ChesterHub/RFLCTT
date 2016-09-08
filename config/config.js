@@ -18,7 +18,7 @@ var config = {
 		{
 			module: 'custom_modules/music',
 			position: 'bottom_bar',
-			classes: 'Kevin Chester'
+			classes: 'Kevin Chester Sean Ken'
 		},
 		{
 			module: 'clock',
