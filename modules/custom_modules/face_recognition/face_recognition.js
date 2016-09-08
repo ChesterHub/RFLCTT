@@ -7,8 +7,12 @@
 
 
 	start: function(){
-		
-		
+	},
+//end of start
+
+	getCamera: function() {
+		var self = this;
+
 		var width = 320;   
 		var height = 240;
 		this.video = document.getElementById('video');
@@ -16,16 +20,15 @@
 		console.log(this.canvas);
 		
 		navigator.getMedia = ( navigator.getUserMedia ||
-			navigator.webkitGetUserMedia ||
-			navigator.mozGetUserMedia ||
-			navigator.msGetUserMedia);
+		navigator.webkitGetUserMedia ||
+		navigator.mozGetUserMedia ||
+		navigator.msGetUserMedia);
 
+		navigator.getMedia({
+				video: true,
+				audio: false
+			},
 
-		navigator.getMedia(
-		{
-			video: true,
-			audio: false
-		},
 		function(stream) {
 			if (navigator.mozGetUserMedia) {
 				video.mozSrcObject = stream;
@@ -48,11 +51,8 @@
 		}
 		);
 
+		setTimeout(takePicture, 2000)
 
-
-
-		setTimeout(takePicture, 2000);
-		var self = this;
 		function takePicture() {
 			var context = canvas.getContext('2d');
 			// console.log("Click");
@@ -71,25 +71,27 @@
 				image_data = image_data.replace("data:image/gif;base64,", "");
 				image_data = image_data.replace("data:image/bmp;base64,", "");
 				global_image_data = image_data;
-				
 
 				self.sendSocketNotification("PHOTO_SENT", {photoData: global_image_data});
-
 				
 			} else {
 				console.log("else");    
-			}
-			
+			}	
 		}
-//end of start
-},
+	},
 
 	socketNotificationReceived: function(notification, payload) {
 		if (notification === "SHIT") {
 			console.log("OMG I RECEIVED A NOTIFICATION FROM FACE RECOG HELPER")
 			console.log(payload.name)
 			this.sendNotification("Begin Login", {name: payload.name})
+		}
+	},
 
+	notificationReceived: function(notification) {
+		if (notification === "Look at me") {
+			console.log("INSIDE NOTIFICATION RECEIVED TO TRIGGER FACIAL RECOG")
+			this.getCamera()
 		}
 	},
 
