@@ -28,20 +28,21 @@ def start_alexa():
             p1 = Process(target = run_alexa)
             p1.start()
             alexa_active = True
-            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_ALEXA))
+            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
             p2.start()
         else:
             print("Alexa already active.")
 
 def run_alexa():
-    os.system("python ~/Desktop/AlexaPi/start.py ~/Desktop/AlexaPi/Alexa.pmdl")
+    os.chdir("../AlexaPi")
+    os.system("python start.py Alexa.pmdl")
 
 
 def stop_alexa():
     global alexa_active
     if alexa_active == True:
         os.system("pkill -f start.py")
-        alexa_active == False
+        alexa_active = False
     else:
         print("Alexa is not active.")
 
