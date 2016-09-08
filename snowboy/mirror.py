@@ -37,16 +37,16 @@ def start_node():
     os.system("npm start")
 
 def end_mirror():
-    global mirror_active
-    if __name__=='__main__':
-        if mirror_active == True: 
-            p1 = Process(target = end_node)
-            p1.start()
-            mirror_active = False
-            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
-            p2.start()
-        else:
-            print("Magic Mirror is not active.")
+   # global mirror_active
+   # if __name__=='__main__':
+   #     if mirror_active == True: 
+   #         p1 = Process(target = end_node)
+   #         p1.start()
+   #         mirror_active = False
+   #         p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
+   #         p2.start()
+   #     else:
+   #         print("Magic Mirror is not active.")
 
 # method that stops servers
 def end_node():

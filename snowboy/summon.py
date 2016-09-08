@@ -28,7 +28,7 @@ def start_alexa():
             p1 = Process(target = run_alexa)
             p1.start()
             alexa_active = True
-            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_DONG))
+            p2 = Process(target = snowboydecoder.play_audio_file(snowboydecoder.DETECT_ALEXA))
             p2.start()
         else:
             print("Alexa already active.")
