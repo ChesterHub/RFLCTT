@@ -42,7 +42,7 @@ models = sys.argv[1:]
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-sensitivity = [0.45]*len(models)
+sensitivity = [0.55]*len(models)
 
 detector = snowboydecoder.HotwordDetector(models, sensitivity=sensitivity)
 callbacks = [look_at_me, toothbrush, play_panda]
