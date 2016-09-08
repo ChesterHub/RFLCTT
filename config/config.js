@@ -62,7 +62,7 @@ var config = {
 		{
 			module: 'custom_modules/face_recognition',
 			position: 'upper_third'
-			
+
     	}
 		//{
 		//	module: 'newsfeed',
