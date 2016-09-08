@@ -21,6 +21,10 @@ var config = {
 			classes: 'Kevin Chester Sean Ken'
 		},
 		{
+			module: 'custom_modules/alexa',
+			position: 'bottom'
+		},
+		{
 			module: 'clock',
 			position: 'top_left',
 			classes: 'Kevin Sean Chester'
@@ -29,7 +33,7 @@ var config = {
 			module: 'calendar',
 			header: 'US Holidays',
 			position: 'top_left',
-			classes: 'Sean',
+			classes: 'Sean Chester',
 			config: {
 				calendars: [
 					{
@@ -55,7 +59,7 @@ var config = {
 		},
 		{
 			module: 'weatherforecast',
-			classes: 'Sean',
+			classes: 'Sean Chester Ken',
 			position: 'top_right',
 			header: 'Weather Forecast',
 			config: {
