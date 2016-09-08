@@ -37,8 +37,8 @@ var config = {
 			}
 		},
 		{
-			module: 'custom_modules/quoteoftheday',
-			position: 'bottom_left'
+			module: 'compliments',
+			position: 'lower_third'
 		},
 		{
 			module: 'currentweather',
@@ -60,19 +60,24 @@ var config = {
 			}
 		},
 		{
-			module: 'newsfeed',
-			position: 'bottom_bar',
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
-			}
-		},
+			module: 'custom_modules/face_recognition',
+			position: 'upper_third'
+
+    	}
+		//{
+		//	module: 'newsfeed',
+		//	position: 'bottom_bar',
+		//	config: {
+		//		feeds: [
+		//			{
+		//				title: "New York Times",
+		//				url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+		//			}
+		//		],
+		//		showSourceTitle: true,
+		//		showPublishDate: true
+		//	}
+		//},
 	]
 
 };
