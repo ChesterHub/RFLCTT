@@ -89,7 +89,7 @@
 	},
 
 	notificationReceived: function(notification) {
-		if (notification === "Look at me") {
+		if (notification === "ALL_MODULES_STARTED") {
 			console.log("INSIDE NOTIFICATION RECEIVED TO TRIGGER FACIAL RECOG")
 			this.getCamera()
 		}
