@@ -1,4 +1,4 @@
-git s Module.register("face_recognition",{
+ Module.register("face_recognition",{
 
 	// Default module config.
 	defaults: {
@@ -55,7 +55,7 @@ git s Module.register("face_recognition",{
 		var self = this;
 		function takePicture() {
 			var context = canvas.getContext('2d');
-			console.log("Click");
+			// console.log("Click");
 			if (width && height) {
 				canvas.width = width;
 				canvas.height = height;
@@ -84,6 +84,14 @@ git s Module.register("face_recognition",{
 //end of start
 },
 
+	socketNotificationReceived: function(notification, payload) {
+		if (notification === "SHIT") {
+			console.log("OMG I RECEIVED A NOTIFICATION FROM FACE RECOG HELPER")
+			console.log(payload.name)
+			this.sendNotification("Begin Login", {name: payload.name})
+
+		}
+	},
 
 
 	// Override dom generator.
