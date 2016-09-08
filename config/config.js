@@ -80,7 +80,7 @@ var config = {
 		{
 			module: "custom_modules/login",
 			position: "lower_third",
-			classes: "Sean"
+			classes: "Sean Kevin"
 		},
 		{
 			module: 'custom_modules/face_recognition'
