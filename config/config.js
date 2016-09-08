@@ -29,6 +29,7 @@ var config = {
 			module: 'calendar',
 			header: 'US Holidays',
 			position: 'top_left',
+			classes: 'Sean',
 			config: {
 				calendars: [
 					{
@@ -54,6 +55,7 @@ var config = {
 		},
 		{
 			module: 'weatherforecast',
+			classes: 'Sean',
 			position: 'top_right',
 			header: 'Weather Forecast',
 			config: {
@@ -80,7 +82,7 @@ var config = {
 		{
 			module: "custom_modules/login",
 			position: "lower_third",
-			classes: "Sean"
+			classes: "Sean Kevin"
 		},
 		{
 			module: 'custom_modules/face_recognition'
