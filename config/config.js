@@ -16,6 +16,10 @@ var config = {
 			module: 'alert'
 		},
 		{
+			module: 'alexa',
+			position: 'bottom_bar'
+		},
+		{
 			module: 'custom_modules/music',
 			position: 'bottom_bar',
 			classes: 'Kevin Chester Sean Ken'
