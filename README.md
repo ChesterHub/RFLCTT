@@ -1,4 +1,4 @@
-![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/Logo.pdf)
+![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/Logo.png)
 
 ## Purpose
 For most people, early mornings are usually a rush of activity with little time to waste. In the midst of washing up, getting dressed, and making breakfast, having to stop to check the weather or your bus schedule can be a real impediment to your momentum. 
@@ -17,7 +17,7 @@ But if you say "Look at me!", RFLCT will activate its facial recognition module 
 
 ## Team
 
-![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/team.pdf)
+![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/team.png)
 
 ## Technology Stack 
 From the get-go, we had two stretch features in mind: facial recognition and voice commands. We managed to achieve both with a menagerie of unfamiliar technologies and a lot of trial and error. 
