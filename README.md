@@ -21,8 +21,11 @@ But if you say "Look at me!", RFLCT will activate its facial recognition module 
 
 ### Github links 
 [Kevin McGovern](https://github.com/kevmcgovern)
+
 [Sean Lee](https://github.com/seanyboy49)
+
 [Chester Hoang](https://github.com/ChesterHub)
+
 [Ken Olsen](https://github.com/kennetholson)
 
 ## Technology Stack 
