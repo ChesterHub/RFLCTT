@@ -6,7 +6,7 @@ For most people, early mornings are usually a rush of activity with little time 
 ## Enter RFLCT
 Rather than build a another productivity app, we approached this problem from a place that takes up most of the morning ritual: the bathroom. And where exactly do you hack a bathroom? Why, the mirror of course. 
 
-**RFLCT** is a voice activated smart mirror that uses facial recognition to recognize a user and display helpful information in a beautiful inteface. It was a Dev Bootcamp final project based on Magic Mirror, an open source modular smart mirror platform. 
+**RFLCT** is a voice activated smart mirror that uses facial recognition to recognize a user and display helpful information in a beautiful inteface. It was a Dev Bootcamp final project based on <a href= "https://github.com/MichMich/MagicMirror">Magic Mirror</a>, an open source modular smart mirror platform. 
 
 ## So what does it do?
 RFLCTT has two modes: a default mode and a user mode. 
@@ -19,15 +19,17 @@ But if you say "Look at me!", RFLCT will activate its facial recognition module 
 
 ![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/team.png)
 
+### Github links 
+[Kevin McGovern](https://github.com/kevmcgovern)
+[Sean Lee](https://github.com/seanyboy49)
+[Chester Hoang](https://github.com/ChesterHub)
+[Ken Olsen](https://github.com/kennetholson)
+
 ## Technology Stack 
 From the get-go, we had two stretch features in mind: facial recognition and voice commands. We managed to achieve both with a menagerie of unfamiliar technologies and a lot of trial and error. 
 
-- Node.js
-- Python
-- Raspberry Pi
-- Amazon Alexa
-- Snowboy
-- Open-Source Code Base (<a href= "https://github.com/MichMich/MagicMirror">Magic Mirror</a>)
+![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/stack.png)
+
 
 ## Hurdles 
 - Unfamiliar tech stack (Prior to this, none of us had ever used Node, Python, Amazon Alexa or machine learning api's).
