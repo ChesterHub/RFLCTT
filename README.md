@@ -1,9 +1,9 @@
-# RFCLT
+![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/RFLCT.pdf)
 
 
 **RFLCT** is a voice activated smart mirror with facial recognition. It was a Dev Bootcamp final project built off of Smart Mirror, an open source modular smart mirror platform. 
 
-## Team 
+![alt-text](https://github.com/ChesterHub/RFLCTT/blob/master/assets/team.pdf)
 
 ## Technology Stack 
 - Node.js
